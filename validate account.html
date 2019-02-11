@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valide account</title>
+</head>
+
+    <input type="text" id="idInput">
+    <input type="button" onclick="checkAccount()">
+<body>
+    <script>
+
+        /*Bước 3: Xây dựng mẫu account hợp lệ
+
+        123abc_
+        _abc123
+        ______
+        123456
+        abcdefg
+        Bước 4: Xây dựng mẫu account không hợp lệ
+        .@
+        12345
+        1234_
+        abcde
+
+        Bước 5: Tạo chương trình thực thi kiểm thử*/
+        function checkAccount() {
+            let input=document.getElementById('idInput').value;
+            regex=/^[0-9a-z_]{6,}$/
+            if (regex.test(input)){
+                alert('your account correct');
+
+            }
+            else alert("pls check your account -  was incorrect");
+        }
+    </script>
+</body>
+</html>
